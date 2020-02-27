@@ -1,0 +1,73 @@
+<h2 class="title-width text-center">nuovo candidato</h2>
+
+<div class="container">
+    <form [formGroup]="candidateForm" novalidate>
+        <div class="form-group">
+          <label>Nome</label>
+          <input type="text" class="form-control" formControlName="name">
+        </div>
+        <div class="form-group">
+          <label>Cognome</label>
+          <input type="text" class="form-control" formControlName="lastname">
+        </div>
+        <div class="form-group">
+          <label>Anno di nascita</label>
+          <input type="number" class="form-control" formControlName="age">
+        </div>
+        <div class="form-group">
+          <label>Provincia di provenienza</label>
+          <input type="text" class="form-control" formControlName="province">
+        </div>
+        <div class="form-group">
+          <label>indirizzo mail</label>
+          <input type="email" class="form-control" formControlName="email">
+        </div>
+
+        <button type="submit" (click)="onSubmit(candidateForm.value)"class="btn btn-primary">Salva</button>
+      </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+  <div class="container-fluid">
+  <mat-accordion class="headers-align">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+              Anagrafica
+          </mat-panel-title>
+          <mat-panel-description>
+              inserire i dati anagrafici
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+          <ng-template>
+              <form>
+                  <mat-form-field apperance="outline">
+                  <mat-label>
+                    Nome
+                  </mat-label>
+                  <input matIunput>
+                </mat-form-field>
+              </form>
+          </ng-template>
+      </mat-expansion-panel>
+  </mat-accordion>
+</div>
+-->
+
+
+
