@@ -1,0 +1,109 @@
+<div class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Scheda anagrafica</h3>
+          <h1 *ngFor="let data of isSelected">{{ data.name }}</h1>
+          <!-- <h1>{{ isSelected }}</h1>  -->
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <!-- <form [formGroup]="anagraficForm"> -->
+            <form #anagraficForm="ngForm" *ngFor="let data of isSelected">
+                <div class="form-group">
+                  <label>Nome</label>
+                  <input type="text" class="form-control" [value]="data.name">
+                  <!-- <input type="text" class="form-control" #name="ngModel" [(ngModel)]="data.name" [ngModelOptions]="{standalone: true}" value="data.name"> -->
+                </div>
+                <!--
+                      <div class="form-group">
+                  <label>Cognome</label>
+                  <input type="text" class="form-control" #lastname="ngModel" [(ngModel)]="data.lastname" [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="form-group">
+                    <label>Età</label>
+                    <input type="text" class="form-control" #age="ngModel" [(ngModel)]="data.age" [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="text" class="form-control" #email="ngModel" [(ngModel)]="data.email" [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="form-group">
+                    <label>Provincia</label>
+                    <input type="text" class="form-control" #province="ngModel" [(ngModel)]="data.province" [ngModelOptions]="{standalone: true}">
+                </div>
+                -->
+                
+                <!--
+                    <div class="form-group">
+                    <label>Genere</label>
+                    <input type="text" class="form-control #genere">
+                </div>
+                <div class="form-group">
+                    <label>Anno di nascita</label>
+                    <input type="text" class="form-control" #annoDiNascita> 
+                </div>
+                <div class="form-group">
+                    <label>Comune</label>
+                    <input type="text" class="form-control" #common>
+                </div>
+                <div class="form-group">
+                    <label>Nazionalità</label>
+                    <input type="text" class="form-control" #sigla_nazionale>
+                </div>
+                <div class="form-group">
+                    <label>Telefono</label>
+                    <input type="text" class="form-control" #phone>
+                </div>
+                <div class="form-group">
+                    <label>skype</label>
+                    <input type="text" class="form-control" #skype>
+                </div>
+                <div class="form-group">
+                    <label>Formazione</label>
+                    <input type="text" class="form-control" #training>
+                </div>
+                <div class="form-group">
+                    <label>Ambito</label>
+                    <input type="text" class="form-control" #ambito>
+                </div>
+                <div class="form-group">
+                    <label>CV</label>
+                    <input type="text" class="form-control" #cv_disponibile>
+                </div>
+                <div class="form-group">
+                    <label>Fonte CV</label>
+                    <input type="text" class="form-control" #fonte_cv>
+                </div>
+                <div class="form-group">
+                    <label>Skills text</label>
+                    <input type="text" class="form-control" #skills_txt>
+                </div>
+                <div class="form-group">
+                    <label>Tipo Candidatura</label>
+                    <input type="text" class="form-control" #tipo_candidatura>
+                </div>
+                <div class="form-group">
+                    <label>Stato</label>
+                    <input type="text" class="form-control" #status>
+                </div>
+                <div class="form-group">
+                    <label>Categoria protetta</label>
+                    <input type="text" class="form-control" #protectedCategory>
+                </div>
+                <div class="form-group">
+                    <label>GDPR</label>
+                    <input type="text" class="form-control" #informativaGDPR>
+                </div>
+                -->
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" (click)="getAnagraficCandidate()">Save changes</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>

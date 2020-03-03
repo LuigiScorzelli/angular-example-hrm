@@ -1,0 +1,22 @@
+<div class="container">
+  <p class="title h2 text-center">Inserisci parameti per la ricerca</p>
+  <p class="title text-danger">{{ errorSearch }}</p>
+  <form [formGroup]="myForm" novalidate>
+    <div class="form-group">
+      <label>Nome</label>
+      <input type="text" class="form-control" [class.is-invalid]="name.invalid && name.touched" formControlName="name">
+      <div *ngIf="name.valid || name.touched">
+        <small *ngIf="name.errors?.required" class="text-danger"> Il nome è obbligatorio</small>
+        <small *ngIf="name.errors?.minlength" class="text-danger">Il nome deve avere minimo 3 caratteri</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Cognome</label>
+      <input type="text" class="form-control" formControlName="lastname">
+    </div>
+    <div class="container d-flex justify-content-center">
+      <button type="submit" (click)="search()" [disabled]="myForm.invalid" class="btn btn-primary">Cerca</button>
+    </div>
+  </form>
+  <app-table [datarequests]="datarequest" ></app-table>
+</div>

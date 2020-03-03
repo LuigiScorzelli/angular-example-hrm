@@ -1,0 +1,32 @@
+<table class="table mt-4">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Lastname</th>
+      <th scope="col">Age</th>
+      <th scope="col">Province</th>
+      <th scope="col">Email</th>
+      <th scope="col" class="text-center">Actions</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <tr *ngFor="let data of dataRequests">
+      <th scope="row">{{ data.id }}</th>
+      <th scope="row">{{ data.name }}</th>
+      <th scope="row">{{ data.lastname }}</th>
+      <th scope="row">{{ data.age }}</th>
+      <th scope="row">{{ data.province }}</th>
+      <th scope="row">{{ data.email }}</th>
+      <th class="d-flex justify-content-center">
+        <button type="button" class="btn btn-info" (click)="getSelected(data)" data-toggle="modal" data-target=".modal">Info</button>
+        <button type="button" class="btn btn-danger ml-2">danger</button>
+      </th>
+    </tr>
+  </tbody>
+
+  <!-- <app-modal-dialog *ngIf="isActive" [selected]="isSelected" (candidateSelected)="isSelected=$event"></app-modal-dialog> -->
+  <app-modal-dialog [selected]="isSelected"></app-modal-dialog> 
+
+</table>

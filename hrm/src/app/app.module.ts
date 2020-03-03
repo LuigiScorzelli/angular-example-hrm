@@ -24,7 +24,10 @@ import {MatExpansionModule} from '@angular/material/expansion';
 
 //import material style component
 // my services
-import { ChedaAnagraficaServiceService } from './Services/SchedaAnagraficaService/cheda-anagrafica-service.service'
+import { ChedaAnagraficaServiceService } from './Services/SchedaAnagraficaService/cheda-anagrafica-service.service';
+import { SelezionaCandidatoComponent } from './components/recruiting-detailsArea/seleziona-candidato/seleziona-candidato.component';
+import { TableComponent } from './components/view-components/table/table.component';
+import { ModalDialogComponent } from './components/view-components/modal-dialog/modal-dialog.component'
 
 @NgModule({
   declarations: [
@@ -33,7 +36,10 @@ import { ChedaAnagraficaServiceService } from './Services/SchedaAnagraficaServic
     FooterComponent,
     routingComponents,
     HomeComponent,
-    NuovoCandidatoComponent
+    NuovoCandidatoComponent,
+    SelezionaCandidatoComponent,
+    TableComponent,
+    ModalDialogComponent
   ],
   imports: [
     BrowserModule,

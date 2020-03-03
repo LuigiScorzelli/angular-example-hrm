@@ -4,11 +4,19 @@
     <form [formGroup]="candidateForm" novalidate>
         <div class="form-group">
           <label>Nome</label>
-          <input type="text" class="form-control" formControlName="name">
+          <input type="text" class="form-control" [class.is-invalid]="name.invalid && name.touched" formControlName="name">
+          <div *ngIf="name.valid || name.touched">
+            <small *ngIf="name.errors?.required" class="text-danger"> Il nome è obbligatorio</small>
+            <small *ngIf="name.errors?.minlength" class="text-danger">Il nome deve avere minimo 3 caratteri</small>
+          </div>
         </div>
         <div class="form-group">
           <label>Cognome</label>
-          <input type="text" class="form-control" formControlName="lastname">
+          <input type="text" class="form-control" [class.is-invalid]="lastname.invalid && lastname.touched" formControlName="lastname">
+          <div *ngIf="lastname.valid || lastname.touched">
+            <small *ngIf="lastname.errors?.required" class="text-danger"> Il cognome è obbligatorio</small>
+            <small *ngIf="lastname.errors?.minlength" class="text-danger">Il cognome deve avere minimo 3 caratteri</small>
+          </div>
         </div>
         <div class="form-group">
           <label>Anno di nascita</label>
@@ -23,7 +31,7 @@
           <input type="email" class="form-control" formControlName="email">
         </div>
 
-        <button type="submit" (click)="onSubmit(candidateForm.value)"class="btn btn-primary">Salva</button>
+        <button type="submit" (click)="getCandidato()" [disabled]="candidateForm.invalid" class="btn btn-primary">Salva</button>
       </form>
 </div>
 

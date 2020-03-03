@@ -14,37 +14,42 @@
               {{ textNavbar.itemTitleNavbarAreaRecruting.itemTextNav}}
             </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" routerLink="/nuovo candidato">{{ textNavbar.itemTitleNavbarAreaRecruting.itemTextDropdown1}}</a>
-                <a class="dropdown-item" href="#">{{ textNavbar.itemTitleNavbarAreaRecruting.itemTextDropdown2}}</a>
-                <a class="dropdown-item" href="#">{{ textNavbar.itemTitleNavbarAreaRecruting.itemTextDropdown3}}</a>
+                <a class="dropdown-item" routerLink="/nuovo candidato">{{ textNavbar.itemTitleNavbarAreaRecruting.itemTextDropdown1 }}</a>
+                <a class="dropdown-item" routerLink="/seleziona candidato">{{ textNavbar.itemTitleNavbarAreaRecruting.itemTextDropdown2 }}</a>
+                <a class="dropdown-item" href="#">{{ textNavbar.itemTitleNavbarAreaRecruting.itemTextDropdown3 }}</a>
               </div>
           </li>
 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Area Commerciale
+              {{ textNavbar.itemTitleNavbarAreaCommercial.itemTextNav }}
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">action 1</a>
-                <a class="dropdown-item" href="#">Another action 1</a>
-                <a class="dropdown-item" href="#">Something else here 1</a>
+                <a class="dropdown-item" href="#">{{ textNavbar.itemTitleNavbarAreaCommercial.itemTextDropdown1 }}</a>
+                <a class="dropdown-item" href="#">{{ textNavbar.itemTitleNavbarAreaCommercial.itemTextDropdown2 }}</a>
             </div>
           </li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Area Corsi
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">action 2</a>
-                <a class="dropdown-item" href="#">Another action 2</a>
-                <a class="dropdown-item" href="#">Something else here 2</a>
-            </div>
-          </li>
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {{ textNavbar.itemTitleNavbarAreaCourses.itemTextNav }}
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">{{ textNavbar.itemTitleNavbarAreaCourses.itemTextDropdown1 }}</a>
+                  <a class="dropdown-item" href="#">{{ textNavbar.itemTitleNavbarAreaCourses.itemTextDropdown2 }}</a>
+              </div>
+            </li>
+            
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  {{ textNavbar.itemTitleNavbarAreaTechnique.itemTextNav }}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">{{ textNavbar.itemTitleNavbarAreaTechnique.itemTextDropdown1 }}</a>
+                    <a class="dropdown-item" href="#">{{ textNavbar.itemTitleNavbarAreaTechnique.itemTextDropdown2 }}</a>
+                </div>
+              </li>
 
-          <li class="nav-item ">
-            <a class="nav-link" href="#">Area Tecnica</a>
-          </li>
         </ul>
       </div>
 
